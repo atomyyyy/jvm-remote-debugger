@@ -11,6 +11,9 @@ public class DemoController {
 
 	@GetMapping("/greeting")
 	public String greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
-		return String.format("Hello %s", name);
+		int x = 1;
+		int y = 2;
+		int z = name.length();
+		return String.format("Hello %s, %i", name, x+y+z);
 	}
 }
